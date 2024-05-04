@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; ":Rating" ":Continent" ":SeatType" ":Reviewer" ":Feedback" ":TimeOfDay" ":Country" ":Review" ":Amenities" ":City" ":TravelClass" ":Date" ":ServiceQuality" ; /*classes style*/
+	":City" -> ":Country" [ label = "rdfs:subClassOf" ];
+	":Continent" -> ":Country" [ label = "rdfs:subClassOf" ];
+	":Feedback" -> ":Review" [ label = "rdfs:subClassOf" ];
+	":Rating" -> ":Review" [ label = "rdfs:subClassOf" ];
+	":TravelClass" -> ":ServiceQuality" [ label = "rdfs:subClassOf" ];
+	":TimeOfDay" -> ":Date" [ label = "rdfs:subClassOf" ];
+	":SeatType" -> ":ServiceQuality" [ label = "rdfs:subClassOf" ];
+	":Amenities" -> ":ServiceQuality" [ label = "rdfs:subClassOf" ];
+	":Reviewer" -> ":Review" [ label = "rdfs:subClassOf" ];
+
+}
