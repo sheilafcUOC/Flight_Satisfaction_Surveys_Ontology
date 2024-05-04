@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Flight" "base:Aircraft" "base:Review" "base:Airline" ; /*classes style*/
+	"NULL" -> "base:reviewRating" [ label = "owl:onProperty" ];
+	"NULL" -> "owl:rational" [ label = "owl:onDataRange" ];
+	"NULL" -> "base:flightDate" [ label = "owl:onProperty" ];
+	"base:Flight" -> "owl:Thing" [ label = "base:hasRating" ];
+	"base:Flight" -> "xsd:dateTime" [ label = "base:flightDate" ];
+	"base:Review" -> "xsd:integer" [ label = "base:reviewRating" ];
+	"base:Flight" -> "owl:Thing" [ label = "base:HighQualityFlight" ];
+	"base:Flight" -> "base:Aircraft" [ label = "base:hasAircraft" ];
+	"base:Flight" -> "base:Airline" [ label = "base:belongsToAirline" ];
+	"base:Review" -> "xsd:float" [ label = "base:hasAverageRating" ];
+
+}
