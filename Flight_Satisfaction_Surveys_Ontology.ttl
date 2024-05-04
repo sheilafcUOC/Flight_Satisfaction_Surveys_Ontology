@@ -1,0 +1,265 @@
+@prefix : <http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/> .
+
+<http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#HighQualityFlight
+:HighQualityFlight rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Flight .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#belongsToAirline
+:belongsToAirline rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Flight ;
+                  rdfs:range :Airline ;
+                  rdfs:comment "Relates a flight to the airline operating that flight." ;
+                  rdfs:label "belongs to Airline" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#hasAircraft
+:hasAircraft rdf:type owl:ObjectProperty ;
+             rdfs:domain :Flight ;
+             rdfs:range :Aircraft ;
+             rdfs:comment "Relates a flight to the type of aircraft used for that flight." ;
+             rdfs:label "has Aircraft" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#hasQuality
+:hasQuality rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#hasRating
+:hasRating rdf:type owl:ObjectProperty ;
+           rdfs:domain :Flight .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#flightDate
+:flightDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Flight ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "Represents the date when a flight occurs." ;
+            rdfs:label "Flight Date" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#hasAverageRating
+:hasAverageRating rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Review ;
+                  rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#reviewRating
+:reviewRating rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Review ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Represents the rating given to a flight review." ;
+              rdfs:label "Review Rating" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:comment "Class representing an aircraft." ;
+          rdfs:label "Aircraft" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:comment "Represents an airline company." ;
+         rdfs:label "Airline" ;
+         owl:sameAs "https://dbpedia.org/page/Qatar_Airways" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Airport
+:Airport rdf:type owl:Class ;
+         rdfs:comment "Class representing an airport." ;
+         rdfs:label "Airport" ;
+         owl:sameAs "https://dbpedia.org/page/Heathrow_Airport" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Amenities
+:Amenities rdf:type owl:Class ;
+           rdfs:subClassOf :ServiceQuality ;
+           rdfs:comment "Class representing amenities available." ;
+           rdfs:label "Amenities" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#CabinCrew
+:CabinCrew rdf:type owl:Class ;
+           rdfs:comment "Class representing cabin crew members." ;
+           rdfs:label "Cabin Crew" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Country ;
+      rdfs:comment "Class representing a city." ;
+      rdfs:label "City" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Continent
+:Continent rdf:type owl:Class ;
+           rdfs:subClassOf :Country ;
+           rdfs:comment "Class representing a continent." ;
+           rdfs:label "Continent" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Country
+:Country rdf:type owl:Class ;
+         rdfs:comment "Class representing a country." ;
+         rdfs:label "Country" ;
+         owl:sameAs "https://dbpedia.org/page/Spain" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Date
+:Date rdf:type owl:Class ;
+      rdfs:comment "Class representing a date." ;
+      rdfs:label "Date" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Feedback
+:Feedback rdf:type owl:Class ;
+          rdfs:subClassOf :Review ;
+          rdfs:comment "Class representing feedback given by a reviewer in a review." ;
+          rdfs:label "Feedback" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :flightDate ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange owl:rational
+                        ] ;
+        rdfs:comment "Class representing a flight." ;
+        rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Luggage
+:Luggage rdf:type owl:Class ;
+         rdfs:comment "Class representing luggage or baggage." ;
+         rdfs:label "Luggage" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Passenger
+:Passenger rdf:type owl:Class ;
+           rdfs:comment "Class representing a passenger." ;
+           rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:subClassOf :Review ;
+        rdfs:comment "Class representing a rating given in a review." ;
+        rdfs:label "Rating" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Reservation
+:Reservation rdf:type owl:Class ;
+             rdfs:comment "Class representing a reservation." ;
+             rdfs:label "Reservation" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Review
+:Review rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :reviewRating ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange owl:rational
+                        ] ;
+        rdfs:comment "Class representing a review." ;
+        rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Reviewer
+:Reviewer rdf:type owl:Class ;
+          rdfs:subClassOf :Review ;
+          rdfs:comment "Class representing a reviewer who provides feedback." ;
+          rdfs:label "Reviewer" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#SeatType
+:SeatType rdf:type owl:Class ;
+          rdfs:subClassOf :ServiceQuality ;
+          rdfs:comment "Class representing types of seats available." ;
+          rdfs:label "Seat Type" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#ServiceQuality
+:ServiceQuality rdf:type owl:Class ;
+                rdfs:comment "Class representing the quality of service provided." ;
+                rdfs:label "Service Quality" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#TimeOfDay
+:TimeOfDay rdf:type owl:Class ;
+           rdfs:subClassOf :Date ;
+           rdfs:comment "Class representing a time of day." ;
+           rdfs:label "Time of Day" .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#TravelClass
+:TravelClass rdf:type owl:Class ;
+             rdfs:subClassOf :ServiceQuality ;
+             rdfs:comment "Class representing classes of travel." ;
+             rdfs:label "Travel Class" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Boeing_787_Dreamliner
+:Boeing_787_Dreamliner rdf:type owl:NamedIndividual ,
+                                :Aircraft .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Heathrow_Airport
+:Heathrow_Airport rdf:type owl:NamedIndividual ,
+                           :Airport .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#John_Smith
+:John_Smith rdf:type owl:NamedIndividual ,
+                     :Passenger .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Qatar_Airways
+:Qatar_Airways rdf:type owl:NamedIndividual ,
+                        :Airline .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#Spain
+:Spain rdf:type owl:NamedIndividual ,
+                :Country .
+
+
+###  http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#QR123_(Qatar_Airways_Flight_123)
+<http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology#QR123_(Qatar_Airways_Flight_123)> rdf:type owl:NamedIndividual ,
+                                                                                                                                      :Flight .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
