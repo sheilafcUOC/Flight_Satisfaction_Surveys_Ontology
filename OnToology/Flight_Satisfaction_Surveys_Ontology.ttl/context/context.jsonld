@@ -1,0 +1,108 @@
+{
+  "@context" : {
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/hasRating",
+      "@type" : "@id"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Review"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Country"
+    },
+    "TravelClass" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/TravelClass"
+    },
+    "hasAircraft" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/hasAircraft",
+      "@type" : "@id"
+    },
+    "TimeOfDay" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/TimeOfDay"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "CabinCrew" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/CabinCrew"
+    },
+    "HighQualityFlight" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/HighQualityFlight",
+      "@type" : "@id"
+    },
+    "Reservation" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Reservation"
+    },
+    "Airport" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Airport"
+    },
+    "hasAverageRating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/hasAverageRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Date" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Date"
+    },
+    "ServiceQuality" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/ServiceQuality"
+    },
+    "Amenities" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Amenities"
+    },
+    "reviewRating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/reviewRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "flightDate" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/flightDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Passenger"
+    },
+    "Luggage" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Luggage"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Rating"
+    },
+    "hasQuality" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/hasQuality",
+      "@type" : "@id"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Aircraft"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Airline"
+    },
+    "Continent" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Continent"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Flight"
+    },
+    "belongsToAirline" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/belongsToAirline",
+      "@type" : "@id"
+    },
+    "City" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/City"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2002/07/owl#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Feedback" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Feedback"
+    },
+    "Reviewer" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/Reviewer"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/4/Flight-Satisfaction-Surveys-Ontology/SeatType"
+    }
+  }
+}
